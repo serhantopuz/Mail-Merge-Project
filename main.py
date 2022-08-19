@@ -7,7 +7,7 @@ with open("Input/Letters/starting_letter.txt") as start:
     starting_text = start.read()
 
 for name in invited_names:
-    with open(f"Output/ReadyToSend/letter_for_{name}.txt", mode="w") as letters:
+    with open(f"Output/ReadyToSend/letter_for_{name.strip()}.txt", mode="w") as letters:
         new_letter = starting_text.replace("[name]", name.strip())
         letters.write(new_letter)
 
